@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card } from './ui/Card';
+import { Card } from './Card';
 import { Rocket, Zap, Smartphone, Package, ArrowRight } from 'lucide-react';
-import { Persona } from '../types';
+import { Persona } from './types';
 
 const personas: Persona[] = [
   {

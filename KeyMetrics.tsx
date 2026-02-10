@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart3, Clock, TrendingUp } from 'lucide-react';
-import { Card } from './ui/Card';
+import { Card } from './Card';
 
 export const KeyMetrics: React.FC = () => {
   return (

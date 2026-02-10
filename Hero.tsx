@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from './ui/Button';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { Button } from './Button';
+import { useScrollAnimation } from './useScrollAnimation';
 import { ChevronDown } from 'lucide-react';
 
 const logos = [

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
-import { FaqItem } from '../types';
+import { FaqItem } from './types';
 
 const faqData: FaqItem[] = [
   {

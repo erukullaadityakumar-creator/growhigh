@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card } from './ui/Card';
-import { CaseStudy } from '../types';
+import { Card } from './Card';
+import { CaseStudy } from './types';
 
 const cases: CaseStudy[] = [
   {

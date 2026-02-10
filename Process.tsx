@@ -1,5 +1,5 @@
 import React from 'react';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useScrollAnimation } from './useScrollAnimation';
 import { Compass, Hammer, BarChart } from 'lucide-react';
 
 const steps = [

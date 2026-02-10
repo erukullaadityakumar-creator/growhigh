@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card } from './ui/Card';
+import { Card } from './Card';
 import { Send, FileText, Settings, Check, ChevronDown, ChevronUp, Clock } from 'lucide-react';
 
 const services = [

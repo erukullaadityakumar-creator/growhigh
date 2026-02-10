@@ -1,15 +1,15 @@
 import React from 'react';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { KeyMetrics } from './components/KeyMetrics';
-import { WhoWeHelp } from './components/WhoWeHelp';
-import { Services } from './components/Services';
-import { Process } from './components/Process';
-import { Results } from './components/Results';
-import { Integrations } from './components/Integrations';
-import { Comparison } from './components/Comparison';
-import { FAQ } from './components/FAQ';
-import { Footer } from './components/Footer';
+import { Navbar } from './Navbar';
+import { Hero } from './Hero';
+import { KeyMetrics } from './KeyMetrics';
+import { WhoWeHelp } from './WhoWeHelp';
+import { Services } from './Services';
+import { Process } from './Process';
+import { Results } from './Results';
+import { Integrations } from './Integrations';
+import { Comparison } from './Comparison';
+import { FAQ } from './FAQ';
+import { Footer } from './Footer';
 
 const App: React.FC = () => {
   return (

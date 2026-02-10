@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from './ui/Card';
+import { Card } from './Card';
 import { Layers, Zap } from 'lucide-react';
 
 const capabilities = [
