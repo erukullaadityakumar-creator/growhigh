@@ -5,126 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GrowHigh | Premium B2B Revenue Automation</title>
     <meta name="description" content="GrowHigh builds autonomous outbound and content systems that generate qualified leads and revenue traction for SaaS founders." />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Space Grotesk', 'sans-serif'],
-              mono: ['Space Mono', 'monospace'],
-              cursive: ['Caveat', 'cursive'],
-            },
-            colors: {
-              brand: {
-                dark: '#050505',      // Nearly Pure Black
-                card: '#0F0F0F',      // Dark Grey for cards
-                hover: '#1A1A1A',     // Lighter Grey for hover
-                border: '#27272A',    // Zinc 800 for borders
-                primary: '#3B82F6',   // Professional Blue (kept as requested)
-                primaryDark: '#2563EB', 
-                secondaryAccent: '#60A5FA', 
-                gold: '#D4AF37',
-              },
-              text: {
-                primary: '#FFFFFF',   
-                secondary: '#E5E7EB', // Gray 200
-                body: '#9CA3AF',      // Gray 400
-                muted: '#6B7280',     // Gray 500
-              }
-            },
-            animation: {
-              'float': 'float 12s ease-in-out infinite',
-              'float-slow': 'floatSlow 15s ease-in-out infinite',
-              'fade-in': 'fadeIn 0.5s ease-out forwards',
-              'fade-in-delayed': 'fadeIn 0.8s ease-out forwards',
-              'slide-up': 'slideUp 0.6s ease-out forwards',
-              'slide-down': 'slideDown 0.6s ease-out forwards',
-              'slide-left': 'slideLeft 0.6s ease-out forwards',
-              'slide-right': 'slideRight 0.6s ease-out forwards',
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'pulse-slow-xl': 'pulseSlow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'grid-pulse': 'gridPulse 10s ease-in-out infinite',
-              'glow-pulse': 'glowPulse 3s ease-in-out infinite',
-              'shimmer': 'shimmer 3s ease-in-out infinite',
-              'bounce-slow': 'bounceSlow 3s ease-in-out infinite',
-              'rotate-slow': 'rotateSlow 20s linear infinite',
-              'scale-up': 'scaleUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
-              'gradient-shift': 'gradientShift 4s ease-in-out infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0) translateX(0)' },
-                '33%': { transform: 'translateY(-20px) translateX(-15px)' },
-                '66%': { transform: 'translateY(20px) translateX(15px)' },
-              },
-              floatSlow: {
-                '0%, 100%': { transform: 'translateY(0) translateX(0)' },
-                '25%': { transform: 'translateY(-30px) translateX(20px)' },
-                '50%': { transform: 'translateY(10px) translateX(-20px)' },
-                '75%': { transform: 'translateY(-15px) translateX(-10px)' },
-              },
-              fadeIn: {
-                '0%': { opacity: '0' },
-                '100%': { opacity: '1' },
-              },
-              slideUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              slideDown: {
-                '0%': { opacity: '0', transform: 'translateY(-20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              slideLeft: {
-                '0%': { opacity: '0', transform: 'translateX(20px)' },
-                '100%': { opacity: '1', transform: 'translateX(0)' },
-              },
-              slideRight: {
-                '0%': { opacity: '0', transform: 'translateX(-20px)' },
-                '100%': { opacity: '1', transform: 'translateX(0)' },
-              },
-              gridPulse: {
-                '0%, 100%': { opacity: '0.08' },
-                '50%': { opacity: '0.12' },
-              },
-              glowPulse: {
-                '0%, 100%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' },
-                '50%': { boxShadow: '0 0 40px rgba(59, 130, 246, 0.8)' },
-              },
-              pulseSlow: {
-                '0%, 100%': { opacity: '1' },
-                '50%': { opacity: '0.5' },
-              },
-              shimmer: {
-                '0%': { backgroundPosition: '-1000px 0' },
-                '100%': { backgroundPosition: '1000px 0' },
-              },
-              bounceSlow: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-15px)' },
-              },
-              rotateSlow: {
-                '0%': { transform: 'rotate(0deg)' },
-                '100%': { transform: 'rotate(360deg)' },
-              },
-              scaleUp: {
-                '0%': { opacity: '0', transform: 'scale(0.95)' },
-                '100%': { opacity: '1', transform: 'scale(1)' },
-              },
-              gradientShift: {
-                '0%, 100%': { backgroundPosition: '0% 50%' },
-                '50%': { backgroundPosition: '100% 50%' },
-              }
-            }
-          }
-        }
-      }
-    </script>
     <style>
       body {
         background-color: #050505;
@@ -143,7 +23,6 @@
           linear-gradient(to right, #1E2749 1px, transparent 1px),
           linear-gradient(to bottom, #1E2749 1px, transparent 1px);
       }
-      /* Custom utility for card hover glow */
       .card-hover-glow:hover {
         box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
         border-color: #3B82F6;
@@ -161,20 +40,9 @@
           scrollbar-width: none;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+  </head>
   <body>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
