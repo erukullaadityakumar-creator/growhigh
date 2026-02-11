@@ -59,6 +59,18 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
+      <div className="w-full pt-8 border-t border-brand-border/30 relative z-10">
+        <p className="text-sm text-text-muted font-medium mb-8 uppercase tracking-widest">Trusted by 50+ Tech Companies</p>
+        
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-100">
+          {logos.map((logo, i) => (
+            <div key={i} className="text-xl md:text-2xl font-display font-bold text-text-muted hover:text-brand-primary hover:scale-105 transition-all duration-300 cursor-default select-none">
+              {logo}
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce opacity-50">
         <ChevronDown className="w-6 h-6 text-text-muted" />
       </div>
