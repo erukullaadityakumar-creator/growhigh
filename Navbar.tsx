@@ -64,7 +64,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-16 left-0 w-full bg-brand-dark border-b border-brand-border p-6 flex flex-col space-y-4 shadow-2xl animate-slide-down">
+        <div className="md:hidden absolute top-16 left-0 w-full bg-brand-dark border-b border-brand-border p-6 flex flex-col space-y-4 shadow-2xl" style={{ animation: `slideDown 0.3s ease-out forwards` }}>
           {navLinks.map((link, idx) => (
             <a 
               key={link.name}

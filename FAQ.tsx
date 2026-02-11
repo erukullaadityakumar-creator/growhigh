@@ -62,7 +62,7 @@ export const FAQ: React.FC = () => {
                   {item.question}
                 </span>
                 {openIndex === index ? (
-                  <Minus className="w-5 h-5 text-brand-primary shrink-0 ml-6 animate-rotate-slow" />
+                  <Minus className="w-5 h-5 text-brand-primary shrink-0 ml-6" style={{ animation: `rotateSlow 1s linear` }} />
                 ) : (
                   <Plus className="w-5 h-5 text-text-muted shrink-0 ml-6 group-hover:text-brand-primary transition-colors duration-300" />
                 )}
