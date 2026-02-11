@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Final CTA */}
-        <div className="relative rounded-2xl p-8 md:p-16 text-center overflow-hidden mb-24 border border-brand-border bg-brand-card hover:border-brand-primary/50 hover:shadow-lg hover:shadow-brand-primary/20 transition-all duration-500 transform hover:-translate-y-2" style={{ animation: `slideUp 0.8s ease-out forwards` }}>
+        <div className="relative rounded-2xl p-8 md:p-16 text-center overflow-hidden mb-24 border border-brand-border bg-brand-card hover:border-brand-primary/50 hover:shadow-lg hover:shadow-brand-primary/20 transition-all duration-500 transform hover:-translate-y-2">
           <div className="absolute inset-0 bg-grid-pattern opacity-10 animate-grid-pulse"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/10 to-transparent z-0"></div>
           

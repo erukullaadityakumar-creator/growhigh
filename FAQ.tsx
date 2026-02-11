@@ -52,7 +52,6 @@ export const FAQ: React.FC = () => {
             <div 
               key={index} 
               className={`bg-brand-card rounded-2xl overflow-hidden transition-all duration-500 ${openIndex === index ? 'border border-brand-primary/50 shadow-lg shadow-brand-primary/10 scale-[1.02]' : 'border border-brand-border hover:border-brand-border/80 hover:shadow-md'}`}
-              style={{ animation: `slideUp 0.6s ease-out forwards`, animationDelay: `${index * 50}ms` }}
             >
               <button
                 className="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none hover:bg-brand-hover/50 transition-colors duration-300 group"
@@ -62,7 +61,7 @@ export const FAQ: React.FC = () => {
                   {item.question}
                 </span>
                 {openIndex === index ? (
-                  <Minus className="w-5 h-5 text-brand-primary shrink-0 ml-6" style={{ animation: `rotateSlow 1s linear` }} />
+                  <Minus className="w-5 h-5 text-brand-primary shrink-0 ml-6" />
                 ) : (
                   <Plus className="w-5 h-5 text-text-muted shrink-0 ml-6 group-hover:text-brand-primary transition-colors duration-300" />
                 )}

@@ -42,10 +42,7 @@ export const Card: React.FC<CardProps> = ({
   return (
     <div
       ref={ref}
-      style={{ 
-        transitionDelay: `${delay}ms`,
-        animation: isVisible ? `${animationType === 'scale-up' ? 'scaleUp' : animationType === 'slide-right' ? 'slideRight' : animationType === 'fade-in' ? 'fadeIn' : 'slideUp'} 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards` : 'none'
-      }}
+      style={{ transitionDelay: `${delay}ms` }}
       className={`
         bg-brand-card border border-brand-border rounded-xl p-8 relative overflow-hidden
         transition-all duration-500 ease-out
