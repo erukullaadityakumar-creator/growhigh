@@ -42,11 +42,14 @@ export const Card: React.FC<CardProps> = ({
   return (
     <div
       ref={ref}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ 
+        transitionDelay: `${delay}ms`,
+        animation: isVisible ? `${animationType === 'scale-up' ? 'scaleUp' : animationType === 'slide-right' ? 'slideRight' : animationType === 'fade-in' ? 'fadeIn' : 'slideUp'} 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards` : 'none'
+      }}
       className={`
         bg-brand-card border border-brand-border rounded-xl p-8 relative overflow-hidden
-        transition-all duration-300 ease-out
-        ${hoverEffect ? 'card-hover-glow hover:bg-brand-hover' : ''}
+        transition-all duration-500 ease-out
+        ${hoverEffect ? 'card-hover-glow hover:bg-brand-hover hover:shadow-2xl' : ''}
         ${getAnimationStyles()}
         ${className}
       `}

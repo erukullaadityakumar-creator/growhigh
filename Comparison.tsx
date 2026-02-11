@@ -24,7 +24,7 @@ export const Comparison: React.FC = () => {
             { feature: "Ongoing Optimization", bad: "Setup and ghost", good: "Weekly optimization calls" },
             { feature: "Reporting & Transparency", bad: "Black box metrics", good: "Real dashboard + ROI" },
           ].map((row, i) => (
-            <div key={i} className={`grid grid-cols-12 items-center py-5 px-6 ${i !== 4 ? 'border-b border-brand-border/50' : ''} hover:bg-brand-hover transition-colors`}>
+            <div key={i} className={`grid grid-cols-12 items-center py-5 px-6 ${i !== 4 ? 'border-b border-brand-border/50' : ''} hover:bg-brand-hover hover:border-brand-primary/30 transition-all duration-300 group`} style={{ animation: `slideRight 0.6s ease-out forwards`, animationDelay: `${i * 60}ms` }}>
               <div className="col-span-4 md:col-span-5 text-sm font-bold text-white pr-4">{row.feature}</div>
               
               <div className="col-span-4 md:col-span-3 flex flex-col items-center justify-center text-center">

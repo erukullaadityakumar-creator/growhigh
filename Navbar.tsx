@@ -33,11 +33,12 @@ export const Navbar: React.FC = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
+            {navLinks.map((link, idx) => (
               <a 
                 key={link.name}
                 href={link.href} 
-                className="text-sm font-medium text-text-body hover:text-brand-primary transition-colors duration-200"
+                className="text-sm font-medium text-text-body hover:text-brand-primary hover:scale-105 transition-all duration-300"
+                style={{ animation: `slideDown 0.6s ease-out forwards`, animationDelay: `${idx * 50}ms` }}
               >
                 {link.name}
               </a>
@@ -63,13 +64,14 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-16 left-0 w-full bg-brand-dark border-b border-brand-border p-6 flex flex-col space-y-4 shadow-2xl">
-          {navLinks.map((link) => (
+        <div className="md:hidden absolute top-16 left-0 w-full bg-brand-dark border-b border-brand-border p-6 flex flex-col space-y-4 shadow-2xl animate-slide-down">
+          {navLinks.map((link, idx) => (
             <a 
               key={link.name}
               href={link.href} 
-              className="text-text-body hover:text-white py-2 block font-medium text-lg"
+              className="text-text-body hover:text-white hover:translate-x-2 py-2 block font-medium text-lg transition-all duration-300"
               onClick={() => setIsOpen(false)}
+              style={{ animation: `slideRight 0.5s ease-out forwards`, animationDelay: `${idx * 60}ms` }}
             >
               {link.name}
             </a>

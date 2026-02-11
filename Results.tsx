@@ -44,7 +44,7 @@ export const Results: React.FC = () => {
             </p>
           </div>
           <div className="mt-8 md:mt-0">
-             <span className="inline-block px-4 py-2 rounded-lg bg-brand-primary/10 border border-brand-primary text-brand-primary text-sm font-bold animate-pulse-slow">
+             <span className="inline-block px-4 py-2 rounded-lg bg-brand-primary/10 border border-brand-primary text-brand-primary text-sm font-bold animate-pulse-slow-xl hover:animate-glow-pulse transition-all duration-300">
                AVG. ROI: 8.5x
              </span>
           </div>

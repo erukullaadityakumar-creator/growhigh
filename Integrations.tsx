@@ -38,11 +38,11 @@ export const Integrations: React.FC = () => {
             
             <ul className="space-y-4">
               {capabilities.map((cap, i) => (
-                <li key={i} className="flex items-center space-x-4 text-text-body group">
-                  <div className="w-6 h-6 rounded-full bg-brand-primary/20 flex items-center justify-center shrink-0 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
+                <li key={i} className="flex items-center space-x-4 text-text-body group" style={{ animation: `slideLeft 0.6s ease-out forwards`, animationDelay: `${i * 50}ms` }}>
+                  <div className="w-6 h-6 rounded-full bg-brand-primary/20 flex items-center justify-center shrink-0 group-hover:bg-brand-primary group-hover:text-white group-hover:scale-125 transition-all duration-300">
                     <Zap className="w-3 h-3 text-brand-primary group-hover:text-white" />
                   </div>
-                  <span className="font-medium text-sm group-hover:text-white transition-colors">{cap}</span>
+                  <span className="font-medium text-sm group-hover:text-white group-hover:translate-x-2 transition-all duration-300">{cap}</span>
                 </li>
               ))}
             </ul>
