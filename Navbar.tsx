@@ -37,15 +37,16 @@ export const Navbar: React.FC = () => {
               <a 
                 key={link.name}
                 href={link.href} 
-                className="text-sm font-medium text-text-body hover:text-brand-primary hover:scale-105 transition-all duration-300"
+                className="text-sm font-medium text-text-body hover:text-brand-primary hover:scale-105 transition-all duration-300 relative group"
                 style={{ animation: `slideDown 0.6s ease-out forwards`, animationDelay: `${idx * 50}ms` }}
               >
                 {link.name}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-primary group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
             <Button 
               variant="primary" 
-              className="!py-2 !px-5 text-sm" 
+              className="!py-2 !px-5 text-sm animate-pulse-subtle" 
               href="https://cal.com/aditya-kumar-erukulla-wsluof/15min" 
               target="_blank"
             >

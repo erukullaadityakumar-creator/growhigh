@@ -32,9 +32,9 @@ export const Process: React.FC = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display">From strategy to scale</h2>
-          <p className="text-text-body text-lg">Our proven process ensures rapid deployment.</p>
+        <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display animate-blur-in">From strategy to scale</h2>
+          <p className="text-text-body text-lg animate-slide-up" style={{ animationDelay: '0.2s' }}>Our proven process ensures rapid deployment.</p>
         </div>
 
         <div ref={ref} className="relative">
@@ -49,9 +49,9 @@ export const Process: React.FC = () => {
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="relative mb-8 transition-transform duration-300 group-hover:-translate-y-2">
-                    <div className="w-20 h-20 rounded-full bg-brand-card border border-brand-border flex items-center justify-center z-10 mx-auto shadow-lg group-hover:border-brand-primary/50 group-hover:shadow-brand-primary/20 transition-all">
-                      <step.icon className="w-8 h-8 text-brand-secondaryAccent group-hover:scale-110 transition-transform" />
+                  <div className="relative mb-8 transition-transform duration-300 group-hover:-translate-y-2 group-hover:animate-wave">
+                    <div className="w-20 h-20 rounded-full bg-brand-card border border-brand-border flex items-center justify-center z-10 mx-auto shadow-lg group-hover:border-brand-primary/50 group-hover:shadow-brand-primary/20 transition-all group-hover:animate-glow-border">
+                      <step.icon className="w-8 h-8 text-brand-secondaryAccent group-hover:scale-110 group-hover:animate-rotate-slow transition-transform" />
                     </div>
                     <div className="absolute top-0 right-0 w-6 h-6 rounded-full bg-brand-primary flex items-center justify-center text-white text-xs font-bold border-2 border-brand-dark">
                       {index + 1}

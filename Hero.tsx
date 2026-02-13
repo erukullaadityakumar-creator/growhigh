@@ -29,22 +29,22 @@ export const Hero: React.FC = () => {
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex-grow flex flex-col justify-center">
         <div className={`transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-8 font-display max-w-6xl mx-auto drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-8 font-display max-w-6xl mx-auto drop-shadow-lg animate-blur-in">
             More demos, customers, and growth — <br/>
-            <span className="font-cursive font-bold text-5xl md:text-7xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-gray-600 leading-tight py-2 inline-block">
+            <span className="font-cursive font-bold text-5xl md:text-7xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-gray-600 leading-tight py-2 inline-block animate-gradient-shift" style={{ backgroundSize: '200% 100%' }}>
               without building a full marketing team
             </span>
           </h1>
           
-          <p className="max-w-2xl mx-auto text-lg text-text-body mb-10 leading-relaxed font-sans">
+          <p className="max-w-2xl mx-auto text-lg text-text-body mb-10 leading-relaxed font-sans animate-slide-up" style={{ animationDelay: '0.2s' }}>
             GrowHigh builds and runs autonomous outbound, LinkedIn, and content systems that deliver qualified opportunities to SaaS founders and automation agencies.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-slide-up" style={{ animationDelay: '0.4s' }}>
             <Button 
               variant="primary" 
               icon="arrow" 
-              className="w-full sm:w-auto px-8 py-4 text-base shadow-brand-primary/25 hover:shadow-brand-primary/40 transition-shadow"
+              className="w-full sm:w-auto px-8 py-4 text-base shadow-brand-primary/25 hover:shadow-brand-primary/40 transition-shadow animate-pulse-subtle"
               href="https://cal.com/aditya-kumar-erukulla-wsluof/15min"
               target="_blank"
             >
@@ -60,7 +60,7 @@ export const Hero: React.FC = () => {
             
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-100">
                {logos.map((logo, i) => (
-                 <div key={i} className="text-xl md:text-2xl font-display font-bold text-text-muted hover:text-brand-primary hover:scale-105 transition-all duration-300 cursor-default select-none">
+                 <div key={i} className="text-xl md:text-2xl font-display font-bold text-text-muted hover:text-brand-primary hover:scale-105 transition-all duration-300 cursor-default select-none animate-fade-in" style={{ animationDelay: `${0.5 + i * 0.1}s` }}>
                    {logo}
                  </div>
                ))}

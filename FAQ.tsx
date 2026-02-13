@@ -43,15 +43,15 @@ export const FAQ: React.FC = () => {
   return (
     <section id="faq" className="py-32 bg-brand-dark">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl font-bold text-white mb-6 font-display">Frequently Asked Questions</h2>
+        <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-4xl font-bold text-white mb-6 font-display animate-blur-in">Frequently Asked Questions</h2>
         </div>
 
         <div className="space-y-4">
           {faqData.map((item, index) => (
             <div 
               key={index} 
-              className={`bg-brand-card rounded-2xl overflow-hidden transition-all duration-500 ${openIndex === index ? 'border border-brand-primary/50 shadow-lg shadow-brand-primary/10 scale-[1.02]' : 'border border-brand-border hover:border-brand-border/80 hover:shadow-md'}`}
+              className={`bg-brand-card rounded-2xl overflow-hidden transition-all duration-500 ${openIndex === index ? 'border border-brand-primary/50 shadow-lg shadow-brand-primary/10 scale-[1.02] animate-pulse-subtle' : 'border border-brand-border hover:border-brand-border/80 hover:shadow-md hover:animate-glow-border'}`}
               style={{ animation: `slideUp 0.6s ease-out forwards`, animationDelay: `${index * 50}ms` }}
             >
               <button

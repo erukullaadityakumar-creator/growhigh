@@ -6,7 +6,7 @@ interface CardProps {
   className?: string;
   delay?: number;
   hoverEffect?: boolean;
-  animationType?: 'slide-up' | 'scale-up' | 'slide-right' | 'fade-in';
+  animationType?: 'slide-up' | 'scale-up' | 'slide-right' | 'fade-in' | 'blur-in' | 'flip-in';
 }
 
 export const Card: React.FC<CardProps> = ({ 
@@ -25,6 +25,8 @@ export const Card: React.FC<CardProps> = ({
         case 'scale-up': return 'opacity-0 scale-95';
         case 'slide-right': return 'opacity-0 -translate-x-8';
         case 'fade-in': return 'opacity-0';
+        case 'blur-in': return 'opacity-0';
+        case 'flip-in': return 'opacity-0';
         case 'slide-up':
         default: return 'opacity-0 translate-y-8';
       }
@@ -34,6 +36,8 @@ export const Card: React.FC<CardProps> = ({
       case 'scale-up': return 'opacity-100 scale-100';
       case 'slide-right': return 'opacity-100 translate-x-0';
       case 'fade-in': return 'opacity-100';
+      case 'blur-in': return 'opacity-100';
+      case 'flip-in': return 'opacity-100';
       case 'slide-up':
       default: return 'opacity-100 translate-y-0';
     }
@@ -44,7 +48,7 @@ export const Card: React.FC<CardProps> = ({
       ref={ref}
       style={{ 
         transitionDelay: `${delay}ms`,
-        animation: isVisible ? `${animationType === 'scale-up' ? 'scaleUp' : animationType === 'slide-right' ? 'slideRight' : animationType === 'fade-in' ? 'fadeIn' : 'slideUp'} 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards` : 'none'
+        animation: isVisible ? `${animationType === 'scale-up' ? 'scaleUp' : animationType === 'slide-right' ? 'slideRight' : animationType === 'fade-in' ? 'fadeIn' : animationType === 'blur-in' ? 'blurIn' : animationType === 'flip-in' ? 'flipIn' : 'slideUp'} ${animationType === 'blur-in' ? '0.8' : animationType === 'flip-in' ? '0.6' : '0.6'}s cubic-bezier(${animationType === 'flip-in' ? '0.68, -0.55, 0.27, 1.55' : '0.34, 1.56, 0.64, 1'}) forwards` : 'none'
       }}
       className={`
         bg-brand-card border border-brand-border rounded-xl p-8 relative overflow-hidden

@@ -33,17 +33,17 @@ export const Results: React.FC = () => {
   return (
     <section id="results" className="py-24 bg-brand-card/30 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 animate-fade-in">
           <div>
-            <div className="inline-block px-3 py-1 rounded-full bg-brand-card border border-brand-border text-white text-xs font-bold uppercase tracking-wider mb-6">
+            <div className="inline-block px-3 py-1 rounded-full bg-brand-card border border-brand-border text-white text-xs font-bold uppercase tracking-wider mb-6 animate-glow-border">
                ⭐ Results
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display">Real Results</h2>
-            <p className="text-text-body text-lg max-w-lg">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display animate-blur-in">Real Results</h2>
+            <p className="text-text-body text-lg max-w-lg animate-slide-up" style={{ animationDelay: '0.2s' }}>
               We don't just promise growth. We engineer it.
             </p>
           </div>
-          <div className="mt-8 md:mt-0">
+          <div className="mt-8 md:mt-0 animate-scale-up" style={{ animationDelay: '0.3s' }}>
              <span className="inline-block px-4 py-2 rounded-lg bg-brand-primary/10 border border-brand-primary text-brand-primary text-sm font-bold animate-pulse-slow-xl hover:animate-glow-pulse transition-all duration-300">
                AVG. ROI: 8.5x
              </span>
@@ -52,7 +52,7 @@ export const Results: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {cases.map((item, index) => (
-            <Card key={index} delay={index * 150} animationType="slide-right" className="border-l-[4px] border-l-brand-primary !pl-6 bg-brand-card hover:bg-brand-card group">
+            <Card key={index} delay={index * 150} animationType={index === 1 ? 'scale-up' : 'slide-right'} className="border-l-[4px] border-l-brand-primary !pl-6 bg-brand-card hover:bg-brand-card group hover:animate-pulse-subtle">
               <div className="mb-6">
                 <span className="text-xs font-bold tracking-widest text-text-muted uppercase font-mono">{item.clientType}</span>
               </div>

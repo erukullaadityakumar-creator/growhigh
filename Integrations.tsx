@@ -24,23 +24,23 @@ export const Integrations: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           
           {/* Capabilities */}
-          <div>
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-card border border-brand-border text-brand-secondaryAccent text-xs font-bold tracking-wide mb-8">
-              <Layers className="w-3 h-3" />
+          <div className="animate-fade-in">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-card border border-brand-border text-brand-secondaryAccent text-xs font-bold tracking-wide mb-8 animate-glow-border">
+              <Layers className="w-3 h-3 animate-rotate-slow" />
               <span>FULL STACK GROWTH</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-display">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-display animate-blur-in">
               Complete Revenue Engines
             </h2>
-            <p className="text-text-body mb-8 text-lg leading-relaxed">
+            <p className="text-text-body mb-8 text-lg leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
               We don't just send emails. We build complete revenue infrastructure that integrates deeply with your existing stack.
             </p>
             
             <ul className="space-y-4">
               {capabilities.map((cap, i) => (
                 <li key={i} className="flex items-center space-x-4 text-text-body group" style={{ animation: `slideLeft 0.6s ease-out forwards`, animationDelay: `${i * 50}ms` }}>
-                  <div className="w-6 h-6 rounded-full bg-brand-primary/20 flex items-center justify-center shrink-0 group-hover:bg-brand-primary group-hover:text-white group-hover:scale-125 transition-all duration-300">
-                    <Zap className="w-3 h-3 text-brand-primary group-hover:text-white" />
+                  <div className="w-6 h-6 rounded-full bg-brand-primary/20 flex items-center justify-center shrink-0 group-hover:bg-brand-primary group-hover:text-white group-hover:scale-125 transition-all duration-300 group-hover:animate-rotate-slow">
+                    <Zap className="w-3 h-3 text-brand-primary group-hover:text-white group-hover:animate-pulse-subtle" />
                   </div>
                   <span className="font-medium text-sm group-hover:text-white group-hover:translate-x-2 transition-all duration-300">{cap}</span>
                 </li>

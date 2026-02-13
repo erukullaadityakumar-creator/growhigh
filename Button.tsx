@@ -20,11 +20,11 @@ export const Button: React.FC<ButtonProps> = ({
   href,
   target
 }) => {
-  const baseStyles = "inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform text-sm md:text-base tracking-wide cursor-pointer active:scale-95";
+  const baseStyles = "inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform text-sm md:text-base tracking-wide cursor-pointer active:scale-95 relative overflow-hidden group";
   
   const variants = {
-    primary: "bg-brand-primary text-white hover:bg-brand-primaryDark shadow-[0_12px_32px_rgba(59,130,246,0.3)] hover:shadow-[0_20px_48px_rgba(59,130,246,0.5)] hover:-translate-y-1 active:translate-y-0",
-    secondary: "bg-transparent border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white hover:shadow-[0_12px_32px_rgba(59,130,246,0.25)] hover:-translate-y-1 active:translate-y-0",
+    primary: "bg-brand-primary text-white hover:bg-brand-primaryDark shadow-[0_12px_32px_rgba(59,130,246,0.3)] hover:shadow-[0_20px_48px_rgba(59,130,246,0.5)] hover:-translate-y-1 active:translate-y-0 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-500",
+    secondary: "bg-transparent border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white hover:shadow-[0_12px_32px_rgba(59,130,246,0.25)] hover:-translate-y-1 active:translate-y-0 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-brand-primary/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-500",
     ghost: "bg-transparent text-brand-primary underline hover:text-brand-primaryDark hover:-translate-y-0.5"
   };
 
@@ -32,12 +32,12 @@ export const Button: React.FC<ButtonProps> = ({
   const combinedClassName = `${baseStyles} ${variants[variant]} ${className}`;
 
   const content = (
-    <>
+    <span className="relative z-10">
       {children}
       {IconComponent && (
-        <IconComponent className={`ml-2 w-4 h-4 ${icon === 'play' ? 'fill-current' : ''}`} />
+        <IconComponent className={`ml-2 w-4 h-4 ${icon === 'play' ? 'fill-current' : ''} inline-block`} />
       )}
-    </>
+    </span>
   );
 
   if (href) {

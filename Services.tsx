@@ -54,21 +54,21 @@ export const Services: React.FC = () => {
   return (
     <section id="services" className="py-24 bg-brand-card/20 border-y border-brand-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-block px-3 py-1 rounded-full bg-brand-card border border-brand-border text-white text-xs font-bold uppercase tracking-wider mb-6">
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-block px-3 py-1 rounded-full bg-brand-card border border-brand-border text-white text-xs font-bold uppercase tracking-wider mb-6 animate-glow-border">
              ✓ Core Systems
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display">Scalable infrastructure</h2>
-          <p className="text-text-body max-w-2xl mx-auto text-lg">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display animate-blur-in">Scalable infrastructure</h2>
+          <p className="text-text-body max-w-2xl mx-auto text-lg animate-slide-up" style={{ animationDelay: '0.2s' }}>
             Choose the system that fits your growth stage.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} delay={index * 120} animationType="scale-up" className="flex flex-col h-full bg-brand-card group">
-              <div className="w-12 h-12 rounded-full bg-brand-dark flex items-center justify-center mb-6 border border-brand-border group-hover:scale-110 group-hover:border-brand-primary/50 transition-all duration-300">
-                <service.icon className="w-6 h-6 text-brand-secondaryAccent group-hover:text-brand-primary" />
+            <Card key={index} delay={index * 120} animationType={index === 0 ? 'flip-in' : index === 1 ? 'scale-up' : 'blur-in'} className="flex flex-col h-full bg-brand-card group hover:animate-pulse-subtle">
+              <div className="w-12 h-12 rounded-full bg-brand-dark flex items-center justify-center mb-6 border border-brand-border group-hover:scale-110 group-hover:border-brand-primary/50 transition-all duration-300 group-hover:animate-rotate-slow">
+                <service.icon className="w-6 h-6 text-brand-secondaryAccent group-hover:text-brand-primary group-hover:animate-pulse-subtle transition-colors" />
               </div>
               
               <h3 className="text-2xl font-bold text-white mb-3 font-display">{service.title}</h3>
