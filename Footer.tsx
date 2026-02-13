@@ -46,28 +46,6 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-              <p className="text-sm text-text-muted font-medium">Join 50+ founders automating their growth</p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button 
-                variant="primary" 
-                className="w-full sm:w-auto text-lg px-8 py-4 shadow-lg hover:shadow-brand-primary/30"
-                href="https://cal.com/aditya-kumar-erukulla-wsluof/15min"
-                target="_blank"
-              >
-                Book Strategy Call
-              </Button>
-              <Button 
-                variant="secondary" 
-                className="w-full sm:w-auto text-lg px-8 py-4"
-                href="mailto:erukullaadityakumar@gmail.com"
-              >
-                Contact via Email
-              </Button>
-            </div>
-          </div>
-        </div>
 
         {/* Footer Links */}
         <div className="flex flex-col md:flex-row justify-between items-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
